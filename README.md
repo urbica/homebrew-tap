@@ -12,7 +12,7 @@ brew tap urbica/tap
 
 ### Martin
 
-Martin is a PostGIS [Mapbox Vector Tiles](https://github.com/mapbox/vector-tile-spec) server.
+[Martin](https://github.com/urbica/martin) is a PostGIS [Mapbox Vector Tiles](https://github.com/mapbox/vector-tile-spec) server.
 
 ```shell
 brew install martin
