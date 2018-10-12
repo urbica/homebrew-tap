@@ -13,8 +13,9 @@ class Galton < Formula
   def install
     args = Language::Node.std_npm_install_args(libexec)
     args.delete_at(args.index("--build-from-source"))
-
     system "npm", "install", "--scripts-prepend-node-path=true", *args
+
+    inreplace "#{libexec}/bin/galton", "#!/usr/bin/env node", "#!/usr/bin/env #{Formula["node@8"].opt_libexec}/bin/node"
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
