@@ -15,7 +15,7 @@ class Galton < Formula
     args.delete_at(args.index("--build-from-source"))
     system "npm", "install", "--scripts-prepend-node-path=true", *args
 
-    inreplace "#{libexec}/bin/galton", "#!/usr/bin/env node", "#!/usr/bin/env #{Formula["node@8"].opt_libexec}/../bin/node"
+    inreplace "#{libexec}/bin/galton", "#!/usr/bin/env node", "#!/usr/bin/env #{Formula["node@8"].opt_bin}/node"
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
