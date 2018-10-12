@@ -11,7 +11,10 @@ class Galton < Formula
   depends_on "node@8"
 
   def install
-    system "npm", "install", "--scripts-prepend-node-path=true", *Language::Node.std_npm_install_args(libexec)
+    args = Language::Node.std_npm_install_args(libexec)
+    args.delete_at(args.index("--build-from-source"))
+
+    system "npm", "install", "--scripts-prepend-node-path=true", *args
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
