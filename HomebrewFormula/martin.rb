@@ -1,5 +1,6 @@
 class Martin < Formula
   current_version="0.1.0"
+
   desc "PostGIS Mapbox Vector Tiles server"
   homepage "https://github.com/urbica/martin"
   url "https://github.com/urbica/martin/releases/download/v#{current_version}/martin-darwin-x86_64.zip"
