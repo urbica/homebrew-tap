@@ -10,6 +10,14 @@ class Martin < Formula
     bin.install "martin"
   end
 
+  def caveats; <<~EOS
+    Martin requires a database connection string.
+    It can be passed as a command-line argument or as a DATABASE_URL environment variable.
+
+      martin postgres://postgres@localhost/db
+  EOS
+  end
+
   test do
     `#{bin}/martin --version`
   end
