@@ -1,10 +1,10 @@
 class Martin < Formula
-  current_version="0.4.1"
+  current_version="0.5.0"
 
   desc "PostGIS Mapbox Vector Tiles server"
   homepage "https://github.com/urbica/martin"
   url "https://github.com/urbica/martin/releases/download/v#{current_version}/martin-Darwin-x86_64.tar.gz"
-  sha256 "cd46aa74bbf8438ee1c54469b7f79490254126e63e096bf20eb600dec2a91c56"
+  sha256 "b80a97912e1c084e878dd89e979bfbd2525f8db95efa67b33a0c5b3d34783f29"
   version "#{current_version}"
 
   def install
